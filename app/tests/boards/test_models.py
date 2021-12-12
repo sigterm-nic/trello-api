@@ -1,5 +1,4 @@
-# app/tests/boards/test_models.py
-
+"""Test Trello Models"""
 import random
 import string
 
@@ -7,7 +6,7 @@ from django.core.exceptions import ValidationError
 from django.db.utils import IntegrityError
 import pytest
 
-from boards.models import BoardSettings, TrelloBoard, TrelloList, TrelloCard
+from trello.models import BoardSettings, TrelloBoard, TrelloList, TrelloCard
 
 def create_token(length: int):
     """Generate psuedo-random password"""
