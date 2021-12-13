@@ -10,14 +10,14 @@ services:
       - 8009:8000
     env_file:
       - ./app/.env.dev
-  trelloapi-db:
+  trello-db:
     image: postgres:13-alpine
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
-      - POSTGRES_USER=trelloapi
-      - POSTGRES_PASSWORD=trelloapi
-      - POSTGRES_DB=trelloapi_dev
+      - POSTGRES_USER=trellouser
+      - POSTGRES_PASSWORD=trellouser
+      - POSTGRES_DB=trello_dev
 
 volumes:
   postgres_data: null
